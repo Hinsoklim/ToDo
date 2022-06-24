@@ -43,6 +43,13 @@ function storeDoneTask(){
     localStorage.setItem('doneTasks', JSON.stringify(doneTasks));
 }
 
+function loadDoneTask(){
+    let doneTask = JSON.parse(localStorage.getItem('doneTasks'));
+    if(doneTask !== null) {
+        doneTasks = doneTask;
+    }
+}
+
 // Create a new task function
 function onCreate(){
     if(storeEditTask != null){
@@ -216,5 +223,7 @@ function doneTask(event) {
 loadTask();
 
 displayTask();
+
+loadDoneTask();
 
 
