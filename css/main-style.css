@@ -156,6 +156,7 @@ textarea{
 #container {
     width: 60%;
     margin: auto;
+    flex-direction: column-reverse;
 }
 
 .card,.time{
